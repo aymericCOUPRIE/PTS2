@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #616161;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.JeuControllers">
+   <top>
+      <HBox alignment="CENTER" prefHeight="64.0" prefWidth="1040.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="progressionQuestion" prefHeight="99.0" prefWidth="280.0" text="Question 1/14 :" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="intituleQuestion" prefHeight="53.0" prefWidth="550.0" text="intitulé de la question" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="36.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="100.0" prefWidth="61.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="53.0" prefWidth="120.0" text="Score :" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbscore" text="0" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <right>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="580.0" prefWidth="240.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <Button fx:id="btnClean" mnemonicParsing="false" onAction="#suppPin" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #A6A6A6; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="Nettoyer Carte">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnValider" mnemonicParsing="false" onAction="#valider" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="Valider Réponse">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnQuitter" mnemonicParsing="false" onAction="#quitter" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #F44336; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="Quitter">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <VBox alignment="CENTER" maxHeight="615.0" maxWidth="800.0" prefHeight="615.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="paneImage" maxHeight="615.0" maxWidth="800.0" prefHeight="615.0" prefWidth="800.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

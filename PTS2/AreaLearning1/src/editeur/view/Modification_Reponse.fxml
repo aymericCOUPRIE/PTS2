@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #616161;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="editeur.view.ModificationReponseControllers">
+   <right>
+      <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="268.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Question :" textFill="WHITE">
+               <font>
+                  <Font size="41.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="listeQuestion" onAction="#changementQuestion" prefHeight="37.0" prefWidth="248.0" promptText="Question" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Button fx:id="btnAjouter" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ajouterZone" prefHeight="70.0" prefWidth="250.0" style="-fx-background-color: #4CAF50; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="+ Ajouter une zone réponse" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnSupprimer" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#supprimerZone" prefHeight="70.0" prefWidth="250.0" style="-fx-background-color: #F44336; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="- Supprimer une zone réponse" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Line endX="110.0" startX="-110.0" stroke="WHITE" strokeWidth="3.0">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Line>
+            <Label text="Options pour la zone :" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btnConfirmer" mnemonicParsing="false" onAction="#confirmerZone" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #417CAA; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="Confirmer" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnAnnuler" mnemonicParsing="false" onAction="#annulerZone" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #417CAA; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="Annuler" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <center>
+      <VBox alignment="CENTER" maxHeight="600.0" maxWidth="720.0" prefHeight="600.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="paneImage" maxHeight="600.0" maxWidth="720.0" onMouseClicked="#ajouterPoint" prefHeight="600.0" prefWidth="720.0" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="102.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnRetour" alignment="CENTER" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#retour" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #F44336; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="Retour">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSauvegarder" alignment="CENTER" layoutX="816.0" layoutY="21.0" mnemonicParsing="false" onAction="#sauvegarder" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #4CAF50; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="Sauvegarder">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

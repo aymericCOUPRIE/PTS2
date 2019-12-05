@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #616161;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.SelectionThemeControllers">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <top>
+      <Label text="Areas Learning" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="AR ESSENCE" size="64.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1018.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnRetour" mnemonicParsing="false" onAction="#retour" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #F44336; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="Retour">
+               <font>
+                  <Font name="Comic Sans MS" size="38.0" />
+               </font></Button>
+            <Pane prefHeight="100.0" prefWidth="604.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnConfirmer" mnemonicParsing="false" onAction="#confirmer" prefHeight="82.0" prefWidth="243.0" style="-fx-background-color: #4CAF50; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="Confirmer">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <HBox prefHeight="464.0" prefWidth="1424.0">
+         <children>
+            <VBox prefHeight="464.0" prefWidth="726.0" style="-fx-background-color: #FFF;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Thèmes :">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <AnchorPane prefHeight="10.0" prefWidth="469.0" style="-fx-background-color: #616161;" VBox.vgrow="NEVER">
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="41.0" prefWidth="556.0" spacing="80.0">
+                           <children>
+                              <Label text="Nom" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Nombre de Questions" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ListView fx:id="lvThemes" prefHeight="412.0" prefWidth="437.0" />
+                        <VBox prefHeight="419.0" prefWidth="120.0" spacing="30.0">
+                           <children>
+                              <RadioButton fx:id="rbDiff" mnemonicParsing="false" selected="true" text="Moyen">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="group" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Difficile" toggleGroup="$group" />
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Pane prefHeight="464.0" prefWidth="220.0" style="-fx-background-color: #616161;" HBox.hgrow="NEVER" />
+            <VBox prefHeight="464.0" prefWidth="467.0" style="-fx-background-color: #FFF;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Description :">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <AnchorPane prefHeight="10.0" prefWidth="327.0" style="-fx-background-color: #616161;" VBox.vgrow="NEVER" />
+                  <TextArea fx:id="taDescThemeSelectionne" editable="false" prefHeight="167.0" prefWidth="291.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <right>
+      <AnchorPane prefHeight="494.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+      <AnchorPane prefHeight="494.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

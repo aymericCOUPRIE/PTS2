@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #616161;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="editeur.view.MainControllers">
+   <top>
+      <VBox alignment="CENTER" prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="99.0" prefWidth="595.0" text="AREA LEARNING" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="67.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="EDITEUR">
+               <VBox.margin>
+                  <Insets left="450.0" top="-40.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Italic" size="52.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnAjouter" mnemonicParsing="false" onMousePressed="#ajouterTheme" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: #417CAA; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="AJOUTER UN THEME">
+               <font>
+                  <Font name="Comic Sans MS" size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" top="100.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnModifier" mnemonicParsing="false" onMousePressed="#modifierTheme" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: #417CAA; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="MODIFIER UN THEME">
+               <font>
+                  <Font name="Comic Sans MS" size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="100.0" />
+               </VBox.margin>
+            </Button>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnQuitter" alignment="CENTER" mnemonicParsing="false" onMousePressed="#quitter" prefHeight="150.0" prefWidth="350.0" style="-fx-background-color: #F44336; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;" text="QUITTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="36.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
